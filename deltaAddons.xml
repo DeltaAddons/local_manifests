@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote  name="DeltaAddons"
+             fetch="https://github.com/DeltaAddons"
+             sync-c="true"
+             sync-j="4"
+             revision="refs/heads/main" />
+
+    <remote  name="DeltaAddons-specific"
+             fetch="https://github.com/DeltaAddons"
+             sync-c="true"
+             sync-j="4"
+             revision="refs/heads/lineage-23.0" />
+
+    <!--Packages-->
+    <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="DeltaAddons" />
+    <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="DeltaAddons-specific" />
+    <!--Vendor-->
+    <project path="vendor/DeltaAddons/Audio" name="android_vendor_DeltaAddons_Audio" remote="DeltaAddons"  />
+    <project path="vendor/DeltaAddons/EssentialApps" name="android_vendor_DeltaAddons_EssentialApps" remote="DeltaAddons"  />
+    <project path="vendor/DeltaAddons/JamesDSP" name="android_vendor_DeltaAddons_JamesDSP" remote="DeltaAddons"  />
+    <project path="vendor/DeltaAddons/microG" name="android_vendor_DeltaAddons_microG" remote="DeltaAddons"  />
+
+</manifest>
