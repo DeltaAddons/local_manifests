@@ -6,26 +6,26 @@ DeltΔAddons is a custom vendor tree to add extras to your android ROMs. It adds
 
 Implement it!
 ---------------
-## Download it straight into your local_manifests
+### Download it straight into your local_manifests
 * Using curl
 ```bash
 mkdir local_manifests
-curl -o .repo/local_manifests/deltaAddons.xml <url>
+curl -o .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
 ```
 * Using wget
 ```bash
-wget -P .repo/local_manifests/deltaAddons.xml <url>
+wget -P .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
 ```
 
-## Integrate it to your ROM source manifests
+### Integrate it to your ROM source manifests
 * Download it to snippets/
     * Using curl
     ```bash
-    curl -o .repo/manifests/snippets/deltaAddons.xml <url>
+    curl -o .repo/manifests/snippets/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
     ```
     * Using wget
     ```bash
-    wget -P .repo/manifests/snippets/deltaAddons.xml <url>
+    wget -P .repo/manifests/snippets/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
     ```
 * Comment the project path on other .xml's related to these:
     * Backgrounds
