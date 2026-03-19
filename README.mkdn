@@ -6,6 +6,12 @@ DeltΔAddons is a custom vendor tree to add extras to your android ROMs. It adds
 
 Implement it!
 ---------------
+### Comment the project on other .xml's related to these (located in <source>/.repo/manifests and its subfolders):
+    * `Backgrounds`
+    * `ColumbusService`
+    * `ElmyraService`
+    * `Launcher3` (optional) (if you dont want to use it, make sure to comment out the project in deltaAddons.xml)
+
 ### Download it straight into your local_manifests
 * Using curl
 ```bash
@@ -27,11 +33,6 @@ git submodule add -b <branch> https://github.com/DeltaPrjkts/local_manifests.git
 ```xml
 <include name="deltaSnippets/deltaAddons.xml" />
 ```
-* Comment the project on other .xml's related to these:
-    * `Backgrounds`
-    * `ColumbusService`
-    * `ElmyraService`
-    * `Launcher3` (optional) (if you dont want to use it, make sure to comment out the project in deltaAddons.xml)
 * Extra: Init / Reinit your repo
 If you use forked repos of your ROM source manifests, make sure to push and then reinit the repo
 ```bash
