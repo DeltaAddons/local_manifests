@@ -11,15 +11,20 @@
              fetch="https://github.com/DeltaAddons"
              sync-c="true"
              sync-j="4"
-             revision="refs/heads/lineage-23.0" />
+             revision="refs/heads/lineage-23.2" />
 
+    <!--External-->
+    <project path="external/DeltaAddons-patches" name="android_external_DeltaAddons-patches" remote="DeltaAddons-specific" />
     <!--Packages-->
     <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="DeltaAddons" />
+    <project path="packages/apps/ColumbusService" name="android_packages_apps_ColumbusService" remote="DeltaAddons" />
+    <project path="packages/apps/ElmyraService" name="android_packages_apps_Backgrounds" remote="DeltaAddons" />
     <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="DeltaAddons-specific" />
     <!--Vendor-->
     <project path="vendor/DeltaAddons/Audio" name="android_vendor_DeltaAddons_Audio" remote="DeltaAddons"  />
     <project path="vendor/DeltaAddons/EssentialApps" name="android_vendor_DeltaAddons_EssentialApps" remote="DeltaAddons"  />
     <project path="vendor/DeltaAddons/JamesDSP" name="android_vendor_DeltaAddons_JamesDSP" remote="DeltaAddons"  />
     <project path="vendor/DeltaAddons/microG" name="android_vendor_DeltaAddons_microG" remote="DeltaAddons"  />
+    <!--<project path="vendor/DeltaAddons/sdk" name="android_vendor_DeltaAddons_sdk" remote="DeltaAddons"  />-->
 
 </manifest>
