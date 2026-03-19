@@ -10,28 +10,28 @@ Implement it!
 * Using curl
 ```bash
 mkdir local_manifests
-curl -o .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/_branch_/deltaAddons.xml
+curl -o .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/<branch>/deltaAddons.xml
 ```
 * Using wget
 ```bash
 mkdir local_manifests
-wget -P .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/_branch_/deltaAddons.xml
+wget -P .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/<branch>/deltaAddons.xml
 ```
 
 ### Integrate it to your ROM source manifests
 * Add it as a git submodules
 ```bash
-git submodule add -b _branch_ https://github.com/DeltaPrjkts/local_manifests.git ./deltaSnippets
+git submodule add -b <branch> https://github.com/DeltaPrjkts/local_manifests.git ./.repo/manifests/deltaSnippets
 ```
 * Integrate with `default.xml`, add it to the end of the manifests
 ```xml
-<include name="path/to/deltaAddons.xml" />
+<include name="deltaSnippets/deltaAddons.xml" />
 ```
 * Comment the project on other .xml's related to these:
-    * Backgrounds
-    * ColumbusService
-    * ElmyraService
-    * Launcher3 (optional) (if you dont want to use it, make sure to comment out the project in deltaAddons.xml)
+    * `Backgrounds`
+    * `ColumbusService`
+    * `ElmyraService`
+    * `Launcher3` (optional) (if you dont want to use it, make sure to comment out the project in deltaAddons.xml)
 * Extra: Init / Reinit your repo
 If you use forked repos of your ROM source manifests, make sure to push and then reinit the repo
 ```bash
