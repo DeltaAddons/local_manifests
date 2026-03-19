@@ -2,7 +2,7 @@
 
 What is DeltΔAddons?
 ---------------
-DeltΔAddons is a custom vendor tree to add extras to your android ROMs. It adds unique sounds and wallpapers, privacy-respecting apps, and useful utitilies.
+DeltΔAddons is a custom vendor tree to add extras to your android ROMs. It adds unique sounds and wallpapers, privacy-respecting apps, and some useful utitilies.
 
 Implement it!
 ---------------
@@ -10,28 +10,30 @@ Implement it!
 * Using curl
 ```bash
 mkdir local_manifests
-curl -o .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
+curl -o .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/_branch_/deltaAddons.xml
 ```
 * Using wget
 ```bash
 mkdir local_manifests
-wget -P .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
+wget -P .repo/local_manifests/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/_branch_/deltaAddons.xml
 ```
 
 ### Integrate it to your ROM source manifests
-* Download it to snippets/
-    * Using curl
-    ```bash
-    curl -o .repo/manifests/snippets/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
-    ```
-    * Using wget
-    ```bash
-    wget -P .repo/manifests/snippets/deltaAddons.xml https://raw.githubusercontent.com/DeltaAddons/local_manifests/refs/heads/lineage-23.0/deltaAddons.xml
-    ```
-* Comment the project path on other .xml's related to these:
-    * Backgrounds
-    * Launcher3 (optional)
-* Integrate with `default.xml`
+* Add it as a git submodules
+```bash
+git submodule add -b _branch_ https://github.com/DeltaPrjkts/local_manifests.git ./deltaSnippets
+```
+* Integrate with `default.xml`, add it to the end of the manifests
 ```xml
-<include name="snippets/deltaAddons.xml" />
+<include name="path/to/deltaAddons.xml" />
+```
+* Comment the project on other .xml's related to these:
+    * Backgrounds
+    * ColumbusService
+    * ElmyraService
+    * Launcher3 (optional) (if you dont want to use it, make sure to comment out the project in deltaAddons.xml)
+* Extra: Init / Reinit your repo
+If you use forked repos of your ROM source manifests, make sure to push and then reinit the repo
+```bash
+repo init --submodules -u your_repo -b your_branch --git-lfs
 ```
