@@ -24,7 +24,6 @@
     <project path="vendor/DeltaAddons/Audio" name="android_vendor_DeltaAddons_Audio" remote="DeltaPrjkts"  />
     <project path="vendor/DeltaAddons/EssentialApps" name="android_vendor_DeltaAddons_EssentialApps" remote="DeltaPrjkts"  />
     <project path="vendor/DeltaAddons/JamesDSP" name="android_vendor_DeltaAddons_JamesDSP" remote="DeltaPrjkts"  />
-    <project path="vendor/DeltaAddons/microG" name="android_vendor_DeltaAddons_microG" remote="DeltaPrjkts"  />
     <!--<project path="vendor/DeltaAddons/sdk" name="android_vendor_DeltaAddons_sdk" remote="DeltaPrjkts"  />-->
 
 </manifest>
